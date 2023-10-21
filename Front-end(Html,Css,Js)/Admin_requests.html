@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Requests</title>
+    <style>
+        
+     th {
+        border: 1px solid;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      
+      table {
+        margin-top: 10px;
+        border-collapse: collapse;
+        width: 100%;
+       
+        display: block;
+        overflow-x: auto; 
+       
+        border-spacing: 0;
+      }
+      
+      button{
+        border: 2px solid black;
+        background-color: white;
+        border-radius: 50px;
+        padding: 5px;
+          
+        width: 50%;
+        margin-top: 10px;
+        margin-bottom: 600px;
+        
+          
+      }
+      button:hover{
+        cursor: pointer;
+      }
+      #row2{
+        /* height: 700px; */
+       
+        text-align: center;
+
+        
+      }
+      .navbar{
+        
+            background: #4A82B9;
+            height: 103px;
+
+        }
+        .navbar ul{
+            display: flex;
+            justify-content: space-around;
+            padding-left: 50%;
+        }
+        .navbar ul li{
+            list-style-type: none;
+            margin-top: 37px;
+           
+        }
+        .navbar ul li a{
+            
+           
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            font-weight: 400;
+            
+        }
+        .navbar ul li a:hover{
+            color: rgb(0, 0, 0);
+        }
+        
+        
+      </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="Admin_Dashboard.html">Dashboard</a></li>
+            <li><a href="Admin_requests.html" >Requests</a></li>
+            <li><a href="/">Invoice</a></li>
+            <li><a href="/">Users</a></li>
+            <li><a href="/">Profile</a></li>
+            <li><a href="/">LogOut?</a></li>
+        </ul>
+    </div>
+    <table border="n">
+        <tr >
+            <th>S/N</th>
+            <th >Company Name</th>
+            <th >Customer Name</th>
+            <th >Customer Number</th>
+            <th >Seller's Name</th>
+            <th >Buyer's Name</th>
+            <th>No.of Items</th>
+            <th >Get Details</th>
+            
+        </tr>
+        <tr id="row2">
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ><button><b>GET</b></button> </td>
+            
+        </tr>
+        
+    </table>
+</body>
+</html>

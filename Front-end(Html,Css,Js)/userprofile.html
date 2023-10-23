@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+             background-color: white;
+        }
+
+        header{
+            background-color: #87b4e4;
+            position:fixed;
+            width: 100%;
+            top:0px;
+        }
+
+        header h1{
+            text-align: right;
+            padding-right: 8%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: normal;
+            font-size: larger;
+            color:white;
+        }
+
+        div h1{
+            padding-top: 6%;
+            text-align: center;
+            
+        }
+
+        .maha{
+            text-align: center;
+            width: 100%;
+            
+        }
+
+        form {
+                 padding: 50px;
+                 border-radius: 5px;
+                 align-content: center;
+               } 
+
+          label {
+                  display:block;
+                  text-align: left;
+                  padding-left: 37%;
+                  
+                } 
+
+          input[type="text"] {
+                                 width: 300px;
+                                 border-radius:150px;
+                                 padding: 10px; 
+                                 cursor: pointer;
+                             }
+                             
+            input[type="number"] {
+                                 width: 300px;
+                                 border-radius:150px;
+                                 padding: 10px; 
+                                 cursor: pointer;
+                             }  
+                             
+            input[type="email"] {
+                                 width: 300px;
+                                 border-radius:150px;
+                                 padding: 10px; 
+                                 cursor: pointer;
+                             }
+
+          input[type="Save"] {
+                                 width: 50px;
+                                 border-radius:25px;
+                                 padding: 10px; 
+                                 cursor: pointer;
+                                 text-align: center;
+                               }
+        .mahi{
+            text-align: right;
+            padding-right: 10%;
+            
+        }
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 50px;
+    padding-left: 40%;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 60%;
+    overflow: hidden;
+   
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>USER1</h1>
+    </header>
+
+   <div>
+      <h1>User Profile</h1>
+   </div>
+    
+
+   <div class="profile-container">
+      <div class="profile-image">
+        <img src="avatar.png" alt="Profile Picture">
+      </div>
+  </div>
+  
+
+    <div class="maha">
+        <form action="#" method="POST">
+            <label for="name">User Name</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone-number">Phone Number</label>
+            <input type="number" id="phone-number" name="phone-number" required><br><br>
+        </form>    
+    </div>
+
+    <div class="mahi"> 
+        <form action="#" method="post">
+            <input type="Save" value="Save">
+        </form>
+    </div>
+ 
+    <script>
+        const imageInput = document.getElementById('imageInput');
+const profileImage = document.getElementById('profileImage');
+const cropContainer = document.querySelector('.crop-container');
+const croppedImage = document.getElementById('croppedImage');
+const cropButton = document.getElementById('cropButton');
+const saveButton = document.getElementById('saveButton');
+let imgToCrop = null;
+
+imageInput.addEventListener('change', function (e) {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            profileImage.src = e.target.result;
+            imgToCrop = new Image();
+            imgToCrop.src = e.target.result;
+            imgToCrop.onload = function () {
+                cropContainer.style.display = 'block';
+                profileImage.style.display = 'none';
+            };
+        }
+        reader.readAsDataURL(file);
+    }
+});
+
+cropButton.addEventListener('click', function () {
+    // You can use a library like Cropper.js to implement cropping functionality
+    // Example: https://github.com/fengyuanchen/cropperjs
+    // After cropping, set the result to the croppedImage.src
+    // For this example, we'll just copy the profileImage to croppedImage
+    croppedImage.src = profileImage.src;
+    saveButton.disabled = false;
+});
+
+saveButton.addEventListener('click', function () {
+    // Here, you can send the cropped image to your server for saving
+    // Or save it locally using the HTML5 Canvas API
+    alert('Image saved!');
+});
+
+    </script>
+</body>
+</html>

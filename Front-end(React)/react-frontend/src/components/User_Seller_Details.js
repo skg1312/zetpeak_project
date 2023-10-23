@@ -10,7 +10,7 @@ const User_Seller_Details = () => {
         <div className="row">
           <div className="col-md-2 d-none d-md-block">
             <Sidebar />
-          </div>
+          </div>  
           <div className="col-md-10 col-12" style={{ padding: "2%" }}>
             <div
               style={{

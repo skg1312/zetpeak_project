@@ -1,0 +1,23 @@
+body {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.user{
+    margin-left: 7px;
+ height: 18px;
+ width: 18px;
+  }
+.right{
+    position: relative;
+    left: 1190px;
+    top:10px;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+input[type=text] {
+    background-color: #e7ebe9f9;
+  }
+  

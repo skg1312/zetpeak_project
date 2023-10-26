@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_profile</title>
+    <style>
+        .navbar {
+            background-color: #4A82B9;
+            color: white;
+            padding-top: 30px;
+            height: 73px;
+            width: auto;
+        }
+
+        .navbartext {
+            font-weight: bold;
+            font-family: Bakbak One;
+            font-size: 25px;
+            text-align: right;
+            margin-right: 26px;
+        }
+
+        .text-align {
+            margin-right: 26px;
+        }
+
+        .profile {
+            color: black;
+            font-size: 25px;
+            font-family: Bakbak One;
+            font-weight: bold;
+            word-wrap: break-word;
+            margin-right: 26px;
+
+        }
+        .Adminprofile {
+            color: black;
+            font-size: 40px;
+            font-family: Inter;
+            font-style: italic;
+            font-weight: 800;
+            padding-top: 49px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .Rectangle {
+            height: 1500px;
+            width: 1200px;
+            margin-left: 300px;
+            background: rgba(91, 134, 229, 0.51);
+            border-radius: 30px;
+            border: 1px black solid;
+
+        }
+
+        .Admindetails {
+            color: black;
+            font-size: 24px;
+            font-family: Inter;
+            font-weight: 600;
+            margin-left: 150px;
+            padding: 15px;
+            
+        }
+        #name {
+            height: 30px;
+            width: 450px;
+            border-left: 900px;
+            border-radius: 20px;
+            font-size: 25px;
+            margin-left: 230px;
+        }
+
+        #username{
+            height: 30px;
+            width: 450px;
+            border-left: 900px;
+            border-radius: 20px;
+            font-size: 25px;
+            margin-left: 160px;
+               
+        }
+
+        
+        #email{
+            height: 30px;
+            width: 450px;
+            border-left: 900px;
+            border-radius: 20px;
+            font-size: 25px;
+            margin-left: 235px;
+        }
+        #phone {
+            height: 30px;
+            width: 450px;
+            border-left: 900px;
+            border-radius: 20px;
+            font-size: 25px;
+            margin-left: 230px;
+        }
+        #changepas_align{
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        #currentpass {
+            height: 30px;
+            width: 450px;
+            border-left: 900px;
+            border-radius: 20px;
+            font-size: 25px;
+            margin-left: 85px;
+        }
+        #newpass {
+            height: 30px;
+            width: 450px;
+            border-left: 900px;
+            border-radius: 20px;
+            font-size: 25px;
+            margin-left: 133px;
+        }
+        #confirmpass {
+            height: 30px;
+            width: 450px;
+            border-left: 900px;
+            border-radius: 20px;
+            font-size: 25px;
+            margin-left: 20px;
+        }
+        .save button {
+        height: 40px;
+        width: 150px;
+        border-radius: 25px;
+        font-size: 28px;
+        font-family: Inter;
+        font-weight: 600;
+        top: 763px;
+        left: 786px;
+        margin-top:10px;
+        margin-left: 800px;
+
+      }
+      .update button {
+        height: 40px;
+        width: 160px;
+        border-radius: 25px;
+        font-size: 28px;
+        font-family: Inter;
+        font-weight: 600;
+        top: 763px;
+        left: 786px;
+        margin-top:10px;
+        margin-left: 800px;
+
+
+      }
+       
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbartext">
+            <a class="text-align" id="onclick">Dashboard</a>
+            <a class="text-align">Requests</a>
+            <a class="text-align">Invoice</a>
+            <a class="text-align">Users</a>
+            <a class="profile">Profile</a>
+            <a class="text-align">Logout?</a>
+        </div>
+
+    </div>
+    <br>
+    <div class="Rectangle" height>
+
+        
+
+        <form action="#" method="POST">
+            <div class="Adminprofile">
+                ADMIN PROFILE
+            </div>
+    
+            <div class="Admindetails"> Name 
+                <input type="textbox" id="name">
+            </div>
+            <div class="Admindetails" >User Name
+                <input type="textbox" id="username">
+            </div>
+            <div class="Admindetails">Email
+                <input type="textbox" id="email">
+            </div>
+            <div class="Admindetails">Phone
+                <input type="textbox" id="phone">
+            </div>
+
+
+
+            <div class="save">
+                <button>Save</button>
+              </div>
+
+            <div class="Admindetails" id="changepas_align"><i>Change Password</i> </div>
+            <div class="Admindetails">Current Password
+                <input type="textbox" id="currentpass">
+            </div>
+            <div class="Admindetails">New Password
+                <input type="textbox" id="newpass">
+            </div>
+            <div class="Admindetails">Confirm New Password
+                <input type="textbox" id="confirmpass">
+            </div>
+            <br>
+            <div class="update">
+                <button>Update</button>
+              </div>
+        
+        </form>
+    </div>
+
+
+</body>
+
+</html>
